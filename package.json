@@ -15,5 +15,8 @@
     "parcel": "^2.5.0",
     "parcel-plugin-nuke-dist": "^1.0.1",
     "surge": "^0.23.1"
+  },
+  "dependencies": {
+    "bulma": "^0.9.3"
   }
 }
