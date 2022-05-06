@@ -5,7 +5,9 @@
                 <input class="input" v-model="message">
             </div>
             <div class="control">
-                <button class="button is-primary">Add Item</button>
+                <button class="button is-primary" v-on:click="addItem">
+                    Add Item
+                </button>
             </div>
         </div>
         <div class="content">
@@ -20,8 +22,16 @@
 export default {
     data() {
         return {
-            message: 'Hello Vue!',
+            message: '',
             items: ['piim', 'sai', 'leib']
+        }
+    },
+    methods: {
+        addItem(){
+            if(this.message.trim() != ''){
+                this.items.push(this.message);
+            }
+            this.message = '';
         }
     }
 }
