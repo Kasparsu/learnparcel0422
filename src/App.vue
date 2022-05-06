@@ -1,7 +1,18 @@
 <template>
     <div class="container">
-        <input class="input" v-model="message">
-        <h1 class="is-size-1">{{ message }}</h1>
+        <div class="field has-addons">
+            <div class="control">
+                <input class="input" v-model="message">
+            </div>
+            <div class="control">
+                <button class="button is-primary">Add Item</button>
+            </div>
+        </div>
+        <div class="content">
+            <ul>
+                <li v-for="(item,index) in items" v-bind:key="index">{{item}}</li>
+            </ul>
+        </div>
     </div>
 </template>
 
@@ -9,7 +20,8 @@
 export default {
     data() {
         return {
-            message: 'Hello Vue!'
+            message: 'Hello Vue!',
+            items: ['piim', 'sai', 'leib']
         }
     }
 }
